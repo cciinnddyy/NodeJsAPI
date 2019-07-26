@@ -1,0 +1,4 @@
+Api endpoint 
+    GET request 
+    Request parameters
+    Query parameters
