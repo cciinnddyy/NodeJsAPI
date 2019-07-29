@@ -2,3 +2,20 @@ Api endpoint
     GET request 
     Request parameters
     Query parameters
+
+
+install nodemon -D => npm i nodemon -D 
+create a directive dependency 
+
+`${variable}`
+
+Middleware: function that execute serially
+    Access to request response opject and the next middleware function in the pipe line
+    Execute any code
+    Make changes to the request and the response objects
+    
+ODM: object define model
+
+MongoDB Notes
+mongod --config /usr/local/etc/mongod.config
+db.updateUser("username",{pwd:"",roles:[{}]},writeConcern:{})
