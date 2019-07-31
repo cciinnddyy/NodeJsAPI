@@ -5,10 +5,17 @@ let routerPerson = require('./routes/person');
 //once you have assigned a value to a variable by const, you can't reassign a new value to it.
 let path = require('path');
 
+//to resolve http post body info as express does not know how to handle it by default
+//if incoming request contentType is application/json
+let bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
+
 
 //Middleware, access any request and execute serially
 app.use((req,res,next)=>{
-    console.log(`${new Date().toString()} => ${req.originalUrl}`)
+    console.log(`${new Date().toString()} => ${req.originalUrl},${req.body}`)
     next();
 })
 
