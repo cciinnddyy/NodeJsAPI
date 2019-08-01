@@ -4,7 +4,7 @@ let app = express();
 let routerPerson = require('./routes/person');
 //once you have assigned a value to a variable by const, you can't reassign a new value to it.
 let path = require('path');
-
+let steproute = require('./routes/steproute');
 //to resolve http post body info as express does not know how to handle it by default
 //if incoming request contentType is application/json
 let bodyParser = require('body-parser');
@@ -22,9 +22,9 @@ app.use((req,res,next)=>{
 
 
 
-//regist the router
+//regist the router !!!be careful with the order!!!
 app.use(routerPerson);
-
+app.use(steproute);
 
 //Middleware to handle 404 error and 500 error
 app.use((req,res,next)=>{

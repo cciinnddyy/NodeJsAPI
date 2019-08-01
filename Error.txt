@@ -1,0 +1,8 @@
+Mongoose authentication failed
+
+/* Working */
+mongoose.connect("mongodb://localhost:27017/test", {
+    "user": "admin",
+    "pass": "admin123",
+    "useMongoClient": true
+});
